@@ -5,13 +5,14 @@ learn-symfony3
 Goal: 1 topic - 1 commit.
 
 1. Pick topic from [topic list](TODO.md).
-2. Write example code to cover the topic.
-3. Add explanatory comments.
-4. Tests, of course.
-5. Update README.md `Already done` section with link(s) to official Symfony documentation where the topic is explained.
-6. Mark topic as done with `+` in topic list
-7. Commit. Message should be formatted as `Topic: subtopic`, for example: `Dependency Injection: Factories`.
-8. Do **Pull Request**.
+2. Create [new issue](https://github.com/kuusas/learn-symfony/issues/new) (if nobody created so far). This will prevent us all from doing the same thing.
+3. Write example code to cover the topic.
+4. Add explanatory comments.
+5. Tests, of course.
+6. Update README.md `Already done` section with link(s) to official Symfony documentation where the topic is explained.
+7. Mark topic as done with `+` in topic list
+8. Commit. Message should be formatted as `Topic: subtopic`, for example: `Dependency Injection: Factories`.
+9. Do **Pull Request**.
 
 See [example commit](https://github.com/kuusas/learn-symfony/commit/b6e30ff6bba8a0005696b48a37baf1991dd608e9).
 
