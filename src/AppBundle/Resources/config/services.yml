@@ -1,0 +1,14 @@
+services:
+    # Creating service using static factory method
+    newsletter_manager:
+        class: AppBundle\Newsletter\Manager
+        factory: [AppBundle\Newsletter\StaticManagerFactory, createNewsletterManager]
+
+    # Creating service using factory as a service
+    newsletter_manager.factory:
+        class: AppBundle\Newsletter\ManagerFactory
+    newsletter_manager_2:
+        class: AppBundle\Newsletter\Manager
+        factory: ["@newsletter_manager.factory", createNewsletterManager]
+        arguments:
+            - '@templating'
