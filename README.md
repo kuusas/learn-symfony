@@ -28,3 +28,4 @@ Run `$ phpunit` in project directory.
     $ symfony new learn-symfony
 ```
 2. Dependency Injection: factories http://symfony.com/doc/current/components/dependency_injection/factories.html
+3. Bundles: Overriding default error pages http://symfony.com/doc/current/cookbook/controller/error_pages.html

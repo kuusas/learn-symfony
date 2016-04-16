@@ -56,7 +56,7 @@ List from https://sensiolabs.com/en/symfony/certification.html
 - Controllers
 - The views
 - The resources
-- Overriding default error pages
++ Overriding default error pages
 - Bundle inheritance
 - _Event dispatcher and kernel events_
 - _Semantic configuration and compiler passes_
