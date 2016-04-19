@@ -3,6 +3,8 @@
 namespace Tests\AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use Symfony\Component\BrowserKit\Cookie;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class RequestControllerTest extends WebTestCase
 {
@@ -72,5 +74,41 @@ class RequestControllerTest extends WebTestCase
         $crawler = $this->client->request('GET', '/request/server');
         $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
         $this->assertContains('localhost', $this->client->getResponse()->getContent());
+    }
+
+    public function testCookies()
+    {
+        $this->client->getCookieJar()->set(new Cookie('fizz', 'buzz', strtotime('+1 day')));
+
+        $crawler = $this->client->request('GET', '/request/cookie');
+        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
+        $this->assertContains('buzz', $this->client->getResponse()->getContent());
+    }
+
+    public function testHeadersCustom()
+    {
+        $crawler = $this->client->request('GET', '/request/header-custom', [], [], ['HTTP_fizz' => 'buzz']);
+        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
+        $this->assertContains('buzz', $this->client->getResponse()->getContent());
+    }
+
+    public function testHeadersHost()
+    {
+        $crawler = $this->client->request('GET', '/request/header-host');
+        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
+        $this->assertContains('localhost', $this->client->getResponse()->getContent());
+    }
+
+    public function testFiles()
+    {
+        $photo = new UploadedFile(
+            __DIR__ . '/../Resources/dummy.jpg',
+            'dummy-name.jpg',
+            'image/jpeg',
+            123
+        );
+        $crawler = $this->client->request('POST', '/request/file', [], ['photo' => $photo]);
+        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
+        $this->assertContains('dummy-name.jpg', $this->client->getResponse()->getContent());
     }
 }

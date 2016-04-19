@@ -58,20 +58,46 @@ class RequestController extends Controller
     }
 
     /**
+     * Retrieve COOKIE values
+     * @Route("/cookie", name="request_cookie")
+     */
+    public function cookieAction(Request $request)
+    {
+        return $this->response($request->cookies->get('fizz'));
+    }
+
+    /**
+     * Retrieve HEADER value
+     * @Route("/header-custom", name="request_header_custom")
+     */
+    public function headerCustomAction(Request $request)
+    {
+        return $this->response($request->headers->get('fizz'));
+    }
+
+    /**
+     * Retrieve HEADER value
+     * @Route("/header-host", name="request_header_host")
+     */
+    public function headerContentTypeAction(Request $request)
+    {
+        return $this->response($request->headers->get('host'));
+    }
+
+    /**
+     * Retrieve files
+     * @Route("/file", name="request_file")
+     */
+    public function fileAction(Request $request)
+    {
+        return $this->response($request->files->get('photo')->getClientOriginalName());
+    }
+
+    /**
      * @Route("/simple", name="simple")
      */
     public function simpleAction(Request $request)
     {
-        // retrieves an instance of UploadedFile identified by foo
-        $request->files->get('foo');
-
-        // retrieve a COOKIE value
-        $request->cookies->get('PHPSESSID');
-
-        // retrieve an HTTP request header, with normalized, lowercase keys
-        $request->headers->get('host');
-        $request->headers->get('content_type');
-
         return new Response('<html><body>Hello Mr. Simple!</body></html>');
     }
 
