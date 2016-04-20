@@ -30,3 +30,4 @@ Run `$ phpunit` in project directory.
 2. Dependency Injection: factories http://symfony.com/doc/current/components/dependency_injection/factories.html
 3. Bundles: Overriding default error pages http://symfony.com/doc/current/cookbook/controller/error_pages.html
 4. Controllers: The request http://symfony.com/doc/current/book/controller.html#requests-controller-response-lifecycle
+5. Controllers: The response http://symfony.com/doc/current/book/controller.html#the-request-and-response-object

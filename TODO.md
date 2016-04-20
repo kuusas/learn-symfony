@@ -65,7 +65,7 @@ List from https://sensiolabs.com/en/symfony/certification.html
 - Naming conventions
 - The base Controller class
 + The request
-- The response
++ The response
 - The cookies
 - The session
 - The flash messages
