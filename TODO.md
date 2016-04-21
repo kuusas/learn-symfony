@@ -96,7 +96,7 @@ List from https://sensiolabs.com/en/symfony/certification.html
 - Template includes
 - Loops and conditions
 - URLs generation
-- Controller rendering
++ Controller rendering
 - Translations and pluralization
 - String interpolation
 - _Assets management_

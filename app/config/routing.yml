@@ -1,3 +1,9 @@
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+
+page_contacts:
+    path: /contacts
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/contacts.html.twig
