@@ -24,9 +24,9 @@ class ResponseController extends Controller
 
     /**
      * Json response - hard way
-     * @Route("/json-hard", name="response_json_hard")
+     * @Route("/json-header", name="response_json_header")
      */
-    public function jsonHardAction()
+    public function jsonHeaderAction()
     {
         $response = new Response(json_encode(array('name' => 'John')));
         $response->headers->set('Content-Type', 'application/json');
@@ -40,7 +40,7 @@ class ResponseController extends Controller
     public function jsonAction()
     {
         return new JsonResponse(array('name' => 'John'));
-    }
+    }   
 
     /**
      * Redirect to another action

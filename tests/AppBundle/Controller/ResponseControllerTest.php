@@ -27,9 +27,9 @@ class ResponseControllerTest extends WebTestCase
         $this->assertContains('Shitty success!', $crawler->filter('body')->text());
     }
 
-    public function testJsonHardWay()
+    public function testJsonHeader()
     {
-        $crawler = $this->client->request('GET', '/response/json-hard');
+        $crawler = $this->client->request('GET', '/response/json-header');
         $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
         $this->assertContains('{"name":"John"}', $this->client->getResponse()->getContent());
         $this->assertTrue(

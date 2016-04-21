@@ -174,7 +174,7 @@ List from https://sensiolabs.com/en/symfony/certification.html
 - Profile object
 - Framework objects access
 - Client configuration
-- Request and response objects introspection
++ Request and response objects introspection
 - _PHPUnit bridge_
 - _Handling legacy deprecated code_
 

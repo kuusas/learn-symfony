@@ -31,3 +31,4 @@ Run `$ phpunit` in project directory.
 3. Bundles: Overriding default error pages http://symfony.com/doc/current/cookbook/controller/error_pages.html
 4. Controllers: The request http://symfony.com/doc/current/book/controller.html#requests-controller-response-lifecycle
 5. Controllers: The response http://symfony.com/doc/current/book/controller.html#the-request-and-response-object
+6. Automated Tests: Request and response objects introspection http://symfony.com/doc/current/book/testing.html. Examples came with #4 and #5 (see above).
