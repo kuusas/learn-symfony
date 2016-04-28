@@ -33,3 +33,5 @@ Run `$ phpunit` in project directory.
 5. Controllers: The response http://symfony.com/doc/current/book/controller.html#the-request-and-response-object
 6. Automated Tests: Request and response objects introspection http://symfony.com/doc/current/book/testing.html. Examples came with #4 and #5 (see above).
 7. Templating with Twig: Controller rendering. Render template without controller http://symfony.com/doc/current/cookbook/templating/render_without_controller.html.
+8. Security: Firewalls. http://symfony.com/doc/current/components/security/firewall.html
+9. Security: Guard authenticators http://symfony.com/doc/current/cookbook/security/guard-authentication.html

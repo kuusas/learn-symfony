@@ -30,6 +30,10 @@ security:
             logout:
                 path: /logout
                 target: /
+            guard:
+                authenticators:
+                    - app.token_authenticator
+
 
     access_control:
         - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }

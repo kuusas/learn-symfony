@@ -140,12 +140,12 @@ List from https://sensiolabs.com/en/symfony/certification.html
 - Authorization
 - Configuration
 - Providers
-- Firewalls
++ Firewalls
 - Users
 - Passwords encoders
 - Roles
 - Access Control Rules
-- _Guard authenticators_
++ _Guard authenticators_
 - _Voters and voting strategies_
 
 # HTTP Caching

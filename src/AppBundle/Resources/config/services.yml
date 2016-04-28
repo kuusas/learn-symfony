@@ -1,4 +1,8 @@
 services:
+    app.token_authenticator:
+        class: AppBundle\Security\TokenAuthenticator
+        arguments: ['@doctrine.orm.entity_manager']
+        
     # Creating service using static factory method
     newsletter_manager:
         class: AppBundle\Newsletter\Manager
