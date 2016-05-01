@@ -35,3 +35,4 @@ Run `$ phpunit` in project directory.
 7. Templating with Twig: Controller rendering. Render template without controller http://symfony.com/doc/current/cookbook/templating/render_without_controller.html.
 8. Security: Firewalls. http://symfony.com/doc/current/components/security/firewall.html
 9. Security: Guard authenticators http://symfony.com/doc/current/cookbook/security/guard-authentication.html
+10. Automated Tests: Profile object http://symfony.com/doc/current/cookbook/testing/profiling.html

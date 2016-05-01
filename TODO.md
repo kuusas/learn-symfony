@@ -171,7 +171,7 @@ List from https://sensiolabs.com/en/symfony/certification.html
 - Functional tests with PHPUnit
 - Client object
 - Crawler object
-- Profile object
++ Profile object
 - Framework objects access
 - Client configuration
 + Request and response objects introspection
