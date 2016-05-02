@@ -103,7 +103,7 @@ List from https://sensiolabs.com/en/symfony/certification.html
 - _Debugging variables_
 
 # Forms
-- Forms creation
++ Forms creation
 - Forms handling
 - Form types
 - Forms rendering with Twig
