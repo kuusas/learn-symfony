@@ -2,6 +2,7 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Task;
+use AppBundle\Form\TaskType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -28,6 +29,19 @@ class FormController extends Controller
             ->add('dateCreated', DateType::class)
             ->add('save', SubmitType::class, array('label' => 'Create Task'))
             ->getForm();
+
+        return $this->render('form/new.html.twig', array(
+            'form' => $form->createView(),
+        ));
+    }
+
+    /**
+     * @Route("/class", name="form_class")
+     */
+    public function classAction(Request $request)
+    {
+        $task = new Task();
+        $form = $form = $this->createForm(TaskType::class, $task);
 
         return $this->render('form/new.html.twig', array(
             'form' => $form->createView(),
