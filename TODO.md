@@ -1,4 +1,7 @@
 List from https://sensiolabs.com/en/symfony/certification.html
+# Project specific
+- Travis CI
+- Scrutinizer CI
 
 # PHP and Web Security
 - Object Oriented Programming
