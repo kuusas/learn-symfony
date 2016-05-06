@@ -41,6 +41,8 @@ class FormController extends Controller
     public function classAction(Request $request)
     {
         $task = new Task();
+        $task->setTitle('Make it work!');
+        
         $form = $form = $this->createForm(TaskType::class, $task);
 
         return $this->render('form/new.html.twig', array(
