@@ -24,6 +24,7 @@ class FormControllerTest extends WebTestCase
     public function testFormFromClass()
     {
         $crawler = $this->client->request('GET', '/form/class');
+        var_dump($this->client->getResponse()->getContent());
         $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
         $this->assertContains('Make it work!', $crawler->filter('#task_title')->attr('value'));
         $this->assertContains('Create Task', $crawler->filter('button')->text());
