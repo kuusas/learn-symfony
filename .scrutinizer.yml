@@ -15,3 +15,8 @@ build:
     tests:
       override:
           - bin/phpunit -v
+    project_setup:
+        before:
+          - mysql -e "CREATE DATABASE symfony
+        # after:
+          # - bin/console doctrine:fixtures:load --no-interaction
