@@ -175,7 +175,7 @@ List from https://sensiolabs.com/en/symfony/certification.html
 - Client object
 - Crawler object
 + Profile object
-- Framework objects access
++ Framework objects access
 - Client configuration
 + Request and response objects introspection
 - _PHPUnit bridge_

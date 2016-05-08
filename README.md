@@ -39,3 +39,4 @@ Run `$ phpunit` in project directory.
 9. Security: Guard authenticators http://symfony.com/doc/current/cookbook/security/guard-authentication.html
 10. Automated Tests: Profile object http://symfony.com/doc/current/cookbook/testing/profiling.html
 11. Forms: Forms creation http://symfony.com/doc/current/book/forms.html
+12. Automated Tests: Framework objects access http://symfony.com/doc/current/book/testing.html#accessing-internal-objects
