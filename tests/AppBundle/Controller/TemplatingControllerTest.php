@@ -19,4 +19,18 @@ class TemplatingControllerTest extends WebTestCase
         $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
         $this->assertContains('Contacts', $crawler->filter('h1')->text());
     }
+
+    public function testIncludes()
+    {
+        $crawler = $this->client->request('GET', '/templating/includes');
+        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
+        $this->assertContains('Raccoon', $crawler->filter('h1')->text());
+    }
+
+    public function testIncludesWithNoContext()
+    {
+        $crawler = $this->client->request('GET', '/templating/includes/with-no-context');
+        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
+        $this->assertContains('Noname', $crawler->filter('h1')->text());
+    }
 }

@@ -1,0 +1,7 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    {% include 'templating/_header.html.twig' only %}
+    {# does the same #}
+    {# {{ include('templating/_header.html.twig', with_context = false) }} #}
+{% endblock %}

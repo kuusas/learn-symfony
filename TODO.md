@@ -96,7 +96,7 @@ List from https://sensiolabs.com/en/symfony/certification.html
 - Template inheritance
 - Global variables
 - Filters and functions
-- Template includes
++ Template includes
 - Loops and conditions
 - URLs generation
 + Controller rendering
