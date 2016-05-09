@@ -30,9 +30,11 @@ class FormController extends Controller
             ->add('save', SubmitType::class, array('label' => 'Create Task'))
             ->getForm();
 
-        return $this->render('form/new.html.twig', array(
+        return $this->render(
+            'form/new.html.twig', array(
             'form' => $form->createView(),
-        ));
+            )
+        );
     }
 
     /**
@@ -45,8 +47,10 @@ class FormController extends Controller
         
         $form = $this->createForm(TaskType::class, $task);
 
-        return $this->render('form/new.html.twig', array(
+        return $this->render(
+            'form/new.html.twig', array(
             'form' => $form->createView(),
-        ));
+            )
+        );
     }
 }

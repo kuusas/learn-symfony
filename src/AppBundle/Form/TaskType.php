@@ -11,15 +11,14 @@ class TaskType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
-     * @param array $options
+     * @param array                $options
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
             ->add('title')
             ->add('dateCreated')
-            ->add('save', SubmitType::class, array('label' => 'Create Task'))
-        ;
+            ->add('save', SubmitType::class, array('label' => 'Create Task'));
     }
     
     /**
@@ -27,8 +26,10 @@ class TaskType extends AbstractType
      */
     public function configureOptions(OptionsResolver $resolver)
     {
-        $resolver->setDefaults(array(
+        $resolver->setDefaults(
+            array(
             'data_class' => 'AppBundle\Entity\Task'
-        ));
+            )
+        );
     }
 }

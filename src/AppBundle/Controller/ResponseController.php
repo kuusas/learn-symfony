@@ -15,6 +15,7 @@ class ResponseController extends Controller
 {
     /**
      * Simple success response
+     *
      * @Route("/success/{kind}", name="response_success")
      */
     public function successAction($kind = 'Great')
@@ -24,6 +25,7 @@ class ResponseController extends Controller
 
     /**
      * Json response - hard way
+     *
      * @Route("/json-header", name="response_json_header")
      */
     public function jsonHeaderAction()
@@ -35,6 +37,7 @@ class ResponseController extends Controller
 
     /**
      * Json response
+     *
      * @Route("/json", name="response_json")
      */
     public function jsonAction()
@@ -44,6 +47,7 @@ class ResponseController extends Controller
 
     /**
      * Redirect to another action
+     *
      * @Route("/redirect", name="response_redirect")
      */
     public function redirectAction()
@@ -53,6 +57,7 @@ class ResponseController extends Controller
 
     /**
      * Forward to another action and finish handling aftewards
+     *
      * @Route("/forward", name="response_forward")
      */
     public function forwardAction()

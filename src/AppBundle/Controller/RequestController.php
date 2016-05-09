@@ -14,6 +14,7 @@ class RequestController extends Controller
 {
     /**
      * Is it an ajax request?
+     *
      * @Route("/is-ajax", name="request")
      */
     public function isAjaxAction(Request $request)
@@ -23,6 +24,7 @@ class RequestController extends Controller
 
     /**
      * Get preferred language
+     *
      * @Route("/preferred-language", name="request_preferred_language")
      */
     public function preferredLanguageAction(Request $request)
@@ -32,6 +34,7 @@ class RequestController extends Controller
 
     /**
      * Retrieve GET variables
+     *
      * @Route("/query", name="request_query")
      */
     public function queryAction(Request $request)
@@ -41,6 +44,7 @@ class RequestController extends Controller
 
     /**
      * Retrieve POST variables
+     *
      * @Route("/request", name="request_request")
      */
     public function requestAction(Request $request)
@@ -50,6 +54,7 @@ class RequestController extends Controller
 
     /**
      * Retrieve SERVER variables
+     *
      * @Route("/server", name="request_server")
      */
     public function serverAction(Request $request)
@@ -59,6 +64,7 @@ class RequestController extends Controller
 
     /**
      * Retrieve COOKIE values
+     *
      * @Route("/cookie", name="request_cookie")
      */
     public function cookieAction(Request $request)
@@ -68,6 +74,7 @@ class RequestController extends Controller
 
     /**
      * Retrieve HEADER value
+     *
      * @Route("/header-custom", name="request_header_custom")
      */
     public function headerCustomAction(Request $request)
@@ -77,6 +84,7 @@ class RequestController extends Controller
 
     /**
      * Retrieve HEADER value
+     *
      * @Route("/header-host", name="request_header_host")
      */
     public function headerContentTypeAction(Request $request)
@@ -86,6 +94,7 @@ class RequestController extends Controller
 
     /**
      * Retrieve files
+     *
      * @Route("/file", name="request_file")
      */
     public function fileAction(Request $request)
