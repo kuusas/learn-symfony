@@ -1,4 +1,4 @@
-[![Build Status](https://scrutinizer-ci.com/g/kuusas/learn-symfony/badges/build.png?b=master)](https://scrutinizer-ci.com/g/kuusas/learn-symfony/build-status/master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/kuusas/design-patterns-in-php/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/kuusas/design-patterns-in-php/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/kuusas/learn-symfony/badges/build.png?b=master)](https://scrutinizer-ci.com/g/kuusas/learn-symfony/build-status/master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/kuusas/learn-symfony/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/kuusas/design-patterns-in-php/?branch=master)
 
 learn-symfony3
 ==============
