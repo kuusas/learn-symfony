@@ -160,7 +160,7 @@ List from https://sensiolabs.com/en/symfony/certification.html
 - Edge Side Includes
 
 # Console
-- Built-in commands
++ Built-in commands
 - Custom commands
 - Configuration
 - Options and arguments
