@@ -41,4 +41,28 @@ class TemplatingController extends Controller
         );
     }
 
+    /**
+     * @Route("/for-loop", name="templating_for_loop")
+     */
+    public function forLoopAction()
+    {
+        return $this->render(
+            'templating/for-loop.html.twig',
+            [
+                'list' => [
+                    'one',
+                    'two',
+                    'three',
+                    'four',
+                    'five',
+                    'six',
+                    'seven',
+                    'eight',
+                    'nine',
+                    'ten'
+                ]
+            ]
+        );
+    }
+
 }

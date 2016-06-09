@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h2>Iterate over the range</h2>
+    {% for i in 0..10 %}
+        <p>
+            {{ i }} {{ cycle(['odd', 'even'], i) }}
+            ({{ loop.index0 }}:{{ loop.revindex0 }}) | {{ loop.length }}
+        </p>
+    {% endfor %}
+    <p><code>{{ '{% for i in range(0, 10) %}' }}</code> - does the same</p>
+    <p><code>0..10</code> - generates range with a step of 1, only <code>range(from, to, step)</code> function allows to modify step.</p>
+    <hr>
+
+    <h2>Using filters</h2>
+    {% for i in (0..10)|reverse %}
+        <p>
+            {{ i }} {{ cycle(['odd', 'even'], i) }}
+            ({{ loop.index0 }}:{{ loop.revindex0 }}) | {{ loop.length }}
+        </p>
+    {% endfor %}
+    <p>{{ '{{ dump(10|reverse) }}' }}: {{ dump(10|reverse) }} </p>
+    <p>{{ '{{ dump((1..10)|reverse) }}' }}: {{ dump((1..10)|reverse) }} </p>
+    <hr>
+
+    <h2>Range with letters</h2>
+    {% for letter in 'a'..'z' %}
+        <p>{{ letter }} ({{ loop.index }}:{{ loop.revindex }})</p>
+    {% endfor %}
+    <hr>
+
+    {% for letter in 'a'|upper..'z'|upper %}
+        <p>{{ letter }}</p>
+    {% endfor %}
+    <hr>
+
+    <h2>Iterate over keys</h2>
+    {% for key in list|keys %}
+        <p>{{ key }}</p>
+    {% endfor %}
+    <hr>
+
+    <h2>Iterate over keys and values</h2>
+    {% for key, number in list %}
+        <p>{{ key }}: {{ number }}</p>
+    {% endfor %}
+    <hr>
+
+    <h2>slice filter resets keys</h2>
+    {% for key, number in list|slice(1, 5) %}
+        <p>{{ key }}: {{ number }}</p>
+    {% endfor %}
+    <hr>
+
+    <h2>if condition</h2>
+    {% for key, number in list if key >= 5 or number == 'one' %}
+        <p>{{ key }}: {{ number }}</p>
+    {% endfor %}
+    <hr>
+
+    <h2>Math trick with range</h2>
+    {% for i in 3**2..10 %}
+        <p>
+            {{ i }} {{ cycle(['odd', 'even'], i) }}
+            ({{ loop.index0 }}:{{ loop.revindex0 }}) | {{ loop.length }}
+        </p>
+    {% endfor %}
+    <p>**: Raises the left operand to the power of the right operand. {{ 3 ** 2 }} would return 9.</p>
+    <hr>
+{% endblock %}
